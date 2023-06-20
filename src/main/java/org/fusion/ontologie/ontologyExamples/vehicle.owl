@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:ex="http://example.com/vehicles#">
+
+    <owl:Ontology rdf:about="http://example.com/vehicles"/>
+
+    <owl:Class rdf:about="http://example.com/vehicles#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="http://example.com/vehicles#hasManufacturer">
+        <rdfs:domain rdf:resource="http://example.com/vehicles#Vehicle"/>
+        <rdfs:range rdf:resource="http://example.com/vehicles#Manufacturer"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="http://example.com/vehicles#Manufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+</rdf:RDF>

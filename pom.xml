@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.fusion.ontologie</groupId>
+    <artifactId>FusionOntologie</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>fusion_ontologie</name>
+    <description>Projet de fusion des ontologies</description>
+<!--    <properties>-->
+<!--        <java.version>17</java.version>-->
+<!--    </properties>-->
+
+    <dependencies>
+        <dependency>
+            <groupId>org.rednoise</groupId>
+            <artifactId>rita</artifactId>
+            <version>2.4.501</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>apache-jena-libs</artifactId>
+            <version>4.3.0</version>
+            <type>pom</type>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>edu.mit</groupId>-->
+<!--            <artifactId>jwi</artifactId>-->
+<!--            <version>2.4.0</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>net.sf.jwordnet</groupId>
+            <artifactId>jwnl</artifactId>
+            <version>1.4_rc3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>9.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>9.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>uk.ac.gate.plugins</groupId>
+            <artifactId>wordnet</artifactId>
+            <version>8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rednoise</groupId>
+            <artifactId>rita</artifactId>
+            <version>2.8.21</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:exb="http://example.com/library#">
+
+    <owl:Ontology rdf:about="http://example.com/library"/>
+
+    <owl:Class rdf:about="http://example.com/library#Book">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="http://example.com/library#hasAuthor">
+        <rdfs:domain rdf:resource="http://example.com/library#Book"/>
+        <rdfs:range rdf:resource="http://example.com/library#Author"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="http://example.com/library#Author">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- ... autres concepts, propriétés et instances spécifiques à la bibliothèque ... -->
+
+</rdf:RDF>

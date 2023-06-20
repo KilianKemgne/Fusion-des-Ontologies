@@ -1,0 +1,28 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://example.com/ontology#Artist">
+    <rdfs:label>Artist</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#Book">
+    <rdfs:label>Book</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#Artwork">
+    <rdfs:label>Artwork</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#Author">
+    <rdfs:label>Author</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.com/ontology#hasAuthor">
+    <rdfs:range rdf:resource="http://example.com/ontology#Author"/>
+    <rdfs:domain rdf:resource="http://example.com/ontology#Book"/>
+    <rdfs:label>hasAuthor</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/ontology#hasArtist">
+    <rdfs:range rdf:resource="http://example.com/ontology#Artist"/>
+    <rdfs:domain rdf:resource="http://example.com/ontology#Artwork"/>
+    <rdfs:label>hasArtist</rdfs:label>
+  </owl:ObjectProperty>
+</rdf:RDF>

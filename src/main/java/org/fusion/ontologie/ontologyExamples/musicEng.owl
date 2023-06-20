@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns="http://example.com/music-ontology#">
+
+    <!-- Classes -->
+    <owl:Class rdf:about="Thing"/>
+
+    <owl:Class rdf:about="#MusicGenre">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicArtist">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#SoloArtist">
+        <rdfs:subClassOf rdf:resource="#MusicArtist"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Band">
+        <rdfs:subClassOf rdf:resource="#MusicArtist"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicInstrument">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicAlbum">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicTrack">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicAwards">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicVenue">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicFestival">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicEvent">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicStreamingService">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicChart">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicPlaylist">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicVideo">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#MusicLyrics">
+        <rdfs:subClassOf rdf:resource="#Thing"/>
+    </owl:Class>
+
+    <!-- Properties -->
+    <owl:ObjectProperty rdf:about="#hasGenre">
+        <rdfs:domain rdf:resource="#MusicTrack"/>
+        <rdfs:range rdf:resource="#MusicGenre"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasArtist">
+        <rdfs:domain rdf:resource="#MusicTrack"/>
+        <rdfs:range rdf:resource="#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasAlbum">
+        <rdfs:domain rdf:resource="#MusicTrack"/>
+        <rdfs:range rdf:resource="#MusicAlbum"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasInstrument">
+        <rdfs:domain rdf:resource="#MusicArtist"/>
+        <rdfs:range rdf:resource="#MusicInstrument"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasArtist">
+        <rdfs:domain rdf:resource="#MusicAlbum"/>
+        <rdfs:range rdf:resource="#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasGenre">
+        <rdfs:domain rdf:resource="#MusicAlbum"/>
+        <rdfs:range rdf:resource="#MusicGenre"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasArtist">
+        <rdfs:domain rdf:resource="#MusicEvent"/>
+        <rdfs:range rdf:resource="#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasVenue">
+        <rdfs:domain rdf:resource="#MusicEvent"/>
+        <rdfs:range rdf:resource="#MusicVenue"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasTrack">
+        <rdfs:domain rdf:resource="#MusicPlaylist"/>
+        <rdfs:range rdf:resource="#MusicTrack"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasCreator">
+        <rdfs:domain rdf:resource="#MusicPlaylist"/>
+        <rdfs:range rdf:resource="#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasArtist">
+        <rdfs:domain rdf:resource="#MusicVideo"/>
+        <rdfs:range rdf:resource="#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasDuration">
+        <rdfs:domain rdf:resource="#MusicVideo"/>
+        <rdfs:range rdf:resource="#duration"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasDirector">
+        <rdfs:domain rdf:resource="#MusicVideo"/>
+        <rdfs:range rdf:resource="#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasLyrics">
+        <rdfs:domain rdf:resource="#MusicTrack"/>
+        <rdfs:range rdf:resource="#MusicLyrics"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

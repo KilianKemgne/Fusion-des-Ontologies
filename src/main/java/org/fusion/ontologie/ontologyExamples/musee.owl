@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:exa="http://example.com/art-museum#">
+
+    <owl:Ontology rdf:about="http://example.com/art-museum"/>
+
+    <owl:Class rdf:about="http://example.com/art-museum#Artwork">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="http://example.com/art-museum#hasArtist">
+        <rdfs:domain rdf:resource="http://example.com/art-museum#Artwork"/>
+        <rdfs:range rdf:resource="http://example.com/art-museum#Artist"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="http://example.com/art-museum#Artist">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- ... autres concepts, propriétés et instances spécifiques au musée d'art ... -->
+
+</rdf:RDF>

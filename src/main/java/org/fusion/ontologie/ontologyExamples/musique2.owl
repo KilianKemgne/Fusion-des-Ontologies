@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.com/ontologies/music.owl"
+         xmlns="http://example.com/ontologies/music.owl#">
+
+  <owl:Ontology rdf:about="">
+    <owl:versionIRI rdf:resource="http://example.com/ontologies/music.owl/1.0"/>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="Artist">
+    <rdfs:label>Artiste</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="Album">
+    <rdfs:label>Album</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="Song">
+    <rdfs:label>Chanson</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="MusicalGenre">
+    <rdfs:label>Genre musical</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="tool">
+    <rdfs:label>Instrument</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="Label">
+    <rdfs:label>Label</rdfs:label>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="composer">
+    <rdfs:domain rdf:resource="#Album"/>
+    <rdfs:range rdf:resource="#Artist"/>
+    <rdfs:label>Compositeur</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="lyrist">
+    <rdfs:domain rdf:resource="#Song"/>
+    <rdfs:range rdf:resource="#Artist"/>
+    <rdfs:label>Paroles</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="name">
+    <rdfs:domain rdf:resource="#Artist"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Nom</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="releaseDate">
+    <rdfs:domain rdf:resource="#Album"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>Date de sortie</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="duration">
+    <rdfs:domain rdf:resource="#Song"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:label>Durée</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="popularity">
+    <rdfs:domain rdf:resource="#Song"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:label>Popularité</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="producer">
+    <rdfs:domain rdf:resource="#Movie"/>
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:label>Producteur</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="director">
+    <rdfs:domain rdf:resource="#Movie"/>
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:label>Réalisateur</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="actor">
+    <rdfs:domain rdf:resource="#Movie"/>
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:label>Acteur</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="ActionMovie">
+    <rdfs:label>Film d'action</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Movie"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="DramaMovie">
+    <rdfs:label>Film dramatique</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Movie"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="ComedyMovie">
+    <rdfs:label>Film comique</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Movie"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="ThrillerMovie">
+    <rdfs:label>Film de suspense</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Movie"/>
+  </owl:Class>
+
+  <owl:NamedIndividual rdf:about="Matrix">
+    <rdf:type rdf:resource="#ActionMovie"/>
+    <name>The Matrix</name>
+    <releaseDate>1999-03-31</releaseDate>
+    <producer rdf:resource="http://example.com/persons/joel-silver"/>
+    <director rdf:resource="http://example.com/persons/wachowski-brothers"/>
+    <actor rdf:resource="http://example.com/persons/keanu-reeves"/>
+    <description>Un hacker découvre la vérité sur la réalité simulée dans laquelle il vit.</description>
+  </owl:NamedIndividual>
+
+</rdf:RDF>

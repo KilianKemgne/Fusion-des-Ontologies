@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF xmlns="http://www.example.com/Adresse.owl#"
+     xml:base="http://www.example.com/Adresse.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://www.example.com/Adresse.owl"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="&Adresse;Adresse">
+        <rdfs:label>Adresse</rdfs:label>
+        <rdfs:comment>Une adresse postale.</rdfs:comment>
+    </owl:Class>
+
+    <!-- Propriétés -->
+    <owl:ObjectProperty rdf:about="&Adresse;aPourVille">
+        <rdfs:label>aPourVille</rdfs:label>
+        <rdfs:comment>Indique la ville d'une adresse.</rdfs:comment>
+        <rdfs:domain rdf:resource="&Adresse;Adresse"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
