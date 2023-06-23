@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14/"
+     xml:base="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#Teacher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#Teacher"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#administrative_staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#administrative_staff"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#class_prefect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#class_prefect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#deputy_director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#deputy_director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#administrative_staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#administrative_staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#examination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#examination"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#final_review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#final_review">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#examination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#head_of_department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#head_of_department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#Teacher"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#international_relations_officer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#international_relations_officer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#administrative_staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#partial_review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#partial_review">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#examination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#project -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#project">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#examination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#senior_lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#senior_lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#Teacher"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#simple_student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#simple_student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#student"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#subject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#teacher_assistant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#teacher_assistant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-14#Teacher"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

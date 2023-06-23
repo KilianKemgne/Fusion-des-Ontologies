@@ -1,22 +1,52 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:ex="http://example.com/vehicles#">
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:vehicle="http://example.com/ontology/vehicle#">
 
-    <owl:Ontology rdf:about="http://example.com/vehicles"/>
+  <!-- Main Class: Vehicle -->
+  <owl:Class rdf:about="http://example.com/ontology/vehicle#Vehicle">
+    <rdfs:label>Vehicle</rdfs:label>
+    <rdfs:comment>Class representing a generic vehicle.</rdfs:comment>
+  </owl:Class>
 
-    <owl:Class rdf:about="http://example.com/vehicles#Vehicle">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
+  <!-- Subclass: Car -->
+  <owl:Class rdf:about="http://example.com/ontology/vehicle#Car">
+    <rdfs:label>Car</rdfs:label>
+    <rdfs:comment>Class representing a car.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://example.com/ontology/vehicle#Vehicle"/>
+  </owl:Class>
 
-    <owl:ObjectProperty rdf:about="http://example.com/vehicles#hasManufacturer">
-        <rdfs:domain rdf:resource="http://example.com/vehicles#Vehicle"/>
-        <rdfs:range rdf:resource="http://example.com/vehicles#Manufacturer"/>
-    </owl:ObjectProperty>
+  <!-- Subclass: Motorcycle -->
+  <owl:Class rdf:about="http://example.com/ontology/vehicle#Motorcycle">
+    <rdfs:label>Motorcycle</rdfs:label>
+    <rdfs:comment>Class representing a motorcycle.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://example.com/ontology/vehicle#Vehicle"/>
+  </owl:Class>
 
-    <owl:Class rdf:about="http://example.com/vehicles#Manufacturer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
+  <!-- Property: has a name -->
+  <owl:DatatypeProperty rdf:about="http://example.com/ontology/vehicle#hasName">
+    <rdfs:label>has a name</rdfs:label>
+    <rdfs:comment>Property indicating the name of a vehicle.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.com/ontology/vehicle#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Property: has a color -->
+  <owl:DatatypeProperty rdf:about="http://example.com/ontology/vehicle#hasColor">
+    <rdfs:label>has a color</rdfs:label>
+    <rdfs:comment>Property indicating the color of a vehicle.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.com/ontology/vehicle#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Property: has a license plate number -->
+  <owl:DatatypeProperty rdf:about="http://example.com/ontology/vehicle#hasLicensePlateNumber">
+    <rdfs:label>has a license plate number</rdfs:label>
+    <rdfs:comment>Property indicating the license plate number of a vehicle.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.com/ontology/vehicle#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
 </rdf:RDF>

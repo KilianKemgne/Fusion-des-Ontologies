@@ -1,28 +1,104 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://example.com/ontology#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://example.com/ontology#ComedyMovie">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.com/ontology#Movie"/>
+    </rdfs:subClassOf>
+    <rdfs:label>ComedyMovie</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#Instrument">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.com/ontology#tool"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Instrument</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#MusicalGenre">
+    <rdfs:label>MusicalGenre</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#Album">
+    <j.0:releaseDate>releaseDate</j.0:releaseDate>
+    <rdfs:label>Album</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#ActionMovie">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.com/ontology#Movie"/>
+    </rdfs:subClassOf>
+    <rdfs:label>ActionMovie</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#Person">
+    <rdfs:label>Person</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#tool">
+    <rdfs:label>tool</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/ontology#Label">
+    <rdfs:label>Label</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="http://example.com/ontology#Artist">
+    <j.0:name>name</j.0:name>
     <rdfs:label>Artist</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="http://example.com/ontology#Book">
-    <rdfs:label>Book</rdfs:label>
+  <owl:Class rdf:about="http://example.com/ontology#ThrillerMovie">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.com/ontology#Movie"/>
+    </rdfs:subClassOf>
+    <rdfs:label>ThrillerMovie</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="http://example.com/ontology#Artwork">
-    <rdfs:label>Artwork</rdfs:label>
+  <owl:Class rdf:about="http://example.com/ontology#Movie">
+    <rdfs:label>Movie</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="http://example.com/ontology#Author">
-    <rdfs:label>Author</rdfs:label>
+  <owl:Class rdf:about="http://example.com/ontology#Song">
+    <j.0:popularity>popularity</j.0:popularity>
+    <j.0:duration>duration</j.0:duration>
+    <rdfs:label>Song</rdfs:label>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="http://example.com/ontology#hasAuthor">
-    <rdfs:range rdf:resource="http://example.com/ontology#Author"/>
-    <rdfs:domain rdf:resource="http://example.com/ontology#Book"/>
-    <rdfs:label>hasAuthor</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://example.com/ontology#hasArtist">
+  <owl:Class rdf:about="http://example.com/ontology#DramaMovie">
+    <rdfs:subClassOf rdf:resource="http://example.com/ontology#Movie"/>
+    <rdfs:label>DramaMovie</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.com/ontology#lyricist">
     <rdfs:range rdf:resource="http://example.com/ontology#Artist"/>
-    <rdfs:domain rdf:resource="http://example.com/ontology#Artwork"/>
-    <rdfs:label>hasArtist</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.com/ontology#Song"/>
+    <rdfs:label>lyricist</rdfs:label>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/ontology#producer">
+    <rdfs:range rdf:resource="http://example.com/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://example.com/ontology#Movie"/>
+    <rdfs:label>producer</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/ontology#composer">
+    <rdfs:range rdf:resource="http://example.com/ontology#Artist"/>
+    <rdfs:domain rdf:resource="http://example.com/ontology#Album"/>
+    <rdfs:label>composer</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/ontology#director">
+    <rdfs:range rdf:resource="http://example.com/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://example.com/ontology#Movie"/>
+    <rdfs:label>director</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/ontology#actor">
+    <rdfs:range rdf:resource="http://example.com/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://example.com/ontology#Movie"/>
+    <rdfs:label>actor</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/ontology#popularity">
+    <rdfs:domain rdf:resource="http://example.com/ontology#Song"/>
+    <rdfs:label>popularity</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/ontology#duration">
+    <rdfs:domain rdf:resource="http://example.com/ontology#Song"/>
+    <rdfs:label>duration</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/ontology#name">
+    <rdfs:domain rdf:resource="http://example.com/ontology#Artist"/>
+    <rdfs:label>name</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/ontology#releaseDate">
+    <rdfs:domain rdf:resource="http://example.com/ontology#Album"/>
+    <rdfs:label>releaseDate</rdfs:label>
+  </owl:DatatypeProperty>
 </rdf:RDF>

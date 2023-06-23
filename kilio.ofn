@@ -1,0 +1,121 @@
+Prefix(:=<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17>
+
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bicycle>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bike>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Car>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Company>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Director>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Mechanics>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Person>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Vehicle>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#designer>))
+Declaration(Class(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#technician>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#build>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#design>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#repair>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#rules>))
+Declaration(DataProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#name>))
+Declaration(DataProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#prime>))
+Declaration(DataProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#salary>))
+Declaration(DataProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#title>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#build> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#build>)
+
+FunctionalObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#build>)
+TransitiveObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#build>)
+ObjectPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#build> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#technician>)
+ObjectPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#build> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Vehicle>)
+
+# Object Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#design> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#design>)
+
+FunctionalObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#design>)
+TransitiveObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#design>)
+ObjectPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#design> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#designer>)
+ObjectPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#design> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Vehicle>)
+
+# Object Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#repair> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#repair>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#repair> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Mechanics>)
+ObjectPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#repair> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Vehicle>)
+
+# Object Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#rules> (is CEO)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#rules> "is CEO")
+FunctionalObjectProperty(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#rules>)
+ObjectPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#rules> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Director>)
+ObjectPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#rules> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Company>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#name> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#name>)
+
+DataPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#name> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Person>)
+DataPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#name> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#prime> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#prime>)
+
+DataPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#prime> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#technician>)
+DataPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#prime> xsd:float)
+
+# Data Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#salary> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#salary>)
+
+SubDataPropertyOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#salary> owl:topDataProperty)
+DataPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#salary> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Director>)
+DataPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#salary> xsd:float)
+
+# Data Property: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#title> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#title>)
+
+DataPropertyDomain(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#title> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#technician>)
+DataPropertyRange(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#title> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bicycle> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bicycle>)
+
+SubClassOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bicycle> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Vehicle>)
+
+# Class: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bike> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bike>)
+
+SubClassOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Bike> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Vehicle>)
+
+# Class: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Car> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Car>)
+
+SubClassOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Car> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Vehicle>)
+
+# Class: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Director> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Director>)
+
+SubClassOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Director> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Person>)
+
+# Class: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Mechanics> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Mechanics>)
+
+SubClassOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Mechanics> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Person>)
+
+# Class: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#designer> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#designer>)
+
+SubClassOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#designer> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Person>)
+
+# Class: <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#technician> (<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#technician>)
+
+SubClassOf(<http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#technician> <http://www.semanticweb.org/kilian/ontologies/2023/5/untitled-ontology-17#Person>)
+
+
+)

@@ -18,6 +18,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Objects;
 import java.util.Vector;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class AlignRfcModeler {
@@ -192,7 +194,21 @@ public class AlignRfcModeler {
                 //Adding reflexive relations
                 conceptContext.setRelation(conceptContext.indexOfFormalObject(new DefaultFormalObject(ontClass.getLocalName())), conceptContext.indexOfFormalAttribute(new DefaultFormalAttribute(ontClass.getLocalName())), true);
                 //Handling  heritage in context
-                if (ontClass.getSuperClass()!=null && !ontClass.getSuperClass().getLocalName().equals("Resource")) {
+
+                String superClassURI="";
+                if(!Objects.equals(ontClass.getSuperClass(),null)){
+                     superClassURI = ontClass.getSuperClass().getURI();
+
+                }else{
+                     superClassURI = "p";
+
+                }
+                Pattern pat = Pattern.compile("http://www\\.w3\\.org/.*/rdf-schema#Resource");
+                Matcher m = pat.matcher(superClassURI);
+
+
+
+                if (ontClass.getSuperClass()!=null && !m.matches()) {
                     if(!conceptContext.containsFormalObject(new DefaultFormalObject(ontClass.getSuperClass().getLocalName()))) {
 
                         conceptContext.addAttribute(new DefaultFormalAttribute(ontClass.getSuperClass().getLocalName()));

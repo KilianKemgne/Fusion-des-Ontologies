@@ -4,7 +4,7 @@ import lattice.util.exception.BadInputDataException;
 import lattice.util.relation.RelationalContextFamily;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.fusion.ontologie.OntoDesigner.OntoDesigner;
+import org.fusion.ontologie.OntoDesigner.OntoDesigner2;
 import org.fusion.ontologie.RCAEngine.RCAEngine;
 import org.fusion.ontologie.RFCModeler.AlignRFCModeler.AlignRfcModeler;
 
@@ -103,7 +103,7 @@ public class Acceuil extends JFrame implements ActionListener {
             RCAEngine rcaEngine = new RCAEngine(rcf);
             rcaEngine.computeFTR();
 
-            OntoDesigner ontoDesigner = new OntoDesigner(rcf);
+            OntoDesigner2 ontoDesigner = new OntoDesigner2(rcf);
             try {
                 File ontModel = ontoDesigner.generateOntModel();
                 Desktop.getDesktop().open(ontModel);
